@@ -1,0 +1,375 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+/* Classic Theme (Founder Focus) */
+html[data-theme="classic"] {
+  --theme-primary-bg: #faf9f6; /* ivory */
+  --theme-primary-text: #1a1c1b; /* obsidian-veil */
+  --theme-accent-1: #364442; /* stormbound-teal */
+  --theme-accent-2: #97754d; /* amber-eclipse */
+  --theme-card-bg: #c2ad90; /* sandstone-aura */
+  --theme-border: #c2ad9080; /* sandstone-aura/50 */
+  --theme-link: #97754d; /* amber-eclipse */
+  --theme-link-hover: #5d4429; /* bronzed-ember */
+  --theme-button-bg: #1a1c1b; /* obsidian-veil */
+  --theme-button-text: #c2ad90; /* sandstone-aura */
+  --theme-button-hover-bg: #5d4429; /* bronzed-ember */
+  --theme-input-bg: #f4d4a54d; /* honey-peach/30 */
+  --theme-input-border: #c2ad90b3; /* sandstone-aura/70 */
+  --theme-input-focus: #364442; /* stormbound-teal */
+  --theme-progress-bg: #3644424d; /* stormbound-teal/30 */
+  --theme-progress-fill: #dca38d; /* blush-coral */
+  --theme-hero-bg: #1a1c1b; /* obsidian-veil */
+  --theme-hero-text: #c2ad90; /* sandstone-aura */
+  --theme-hero-opacity: 0.1;
+  --theme-quote-bg: #364442; /* stormbound-teal */
+  --theme-quote-text: #c2ad90; /* sandstone-aura */
+  --theme-quote-opacity: 0.9;
+  --theme-footer-bg: #364442; /* stormbound-teal */
+  --theme-footer-text: #c2ad90; /* sandstone-aura */
+  --theme-footer-link: #97754d; /* amber-eclipse */
+  --theme-footer-border: #364442b3; /* stormbound-teal/70 */
+  --theme-header-bg: #faf9f6; /* ivory */
+  --theme-header-text: #1a1c1b; /* obsidian-veil */
+  --theme-header-border: #c2ad9080; /* sandstone-aura/50 */
+  --theme-header-hover: #97754d4d; /* amber-eclipse/30 */
+  --theme-mobile-nav-bg: #faf9f6; /* ivory */
+  --theme-mobile-nav-text: #1a1c1b; /* obsidian-veil */
+  --theme-mobile-nav-button-bg: #1a1c1b; /* obsidian-veil */
+  --theme-mobile-nav-button-text: #364442; /* stormbound-teal */
+  --theme-mobile-nav-button-hover: #97754d4d; /* amber-eclipse/30 */
+  --theme-checkbox-border: #364442; /* stormbound-teal */
+  --theme-checkbox-checked-bg: #364442; /* stormbound-teal */
+  --theme-checkbox-checked-text: #c2ad90; /* sandstone-aura */
+  --theme-icon-color: #364442; /* stormbound-teal */
+  --theme-icon-hover: #97754d; /* amber-eclipse */
+  --theme-tooltip-bg: #1a1c1b; /* obsidian-veil */
+  --theme-tooltip-text: #c2ad90; /* sandstone-aura */
+  --theme-chart-1: #c1dcdc; /* powder-blue */
+  --theme-chart-2: #dca38d; /* blush-coral */
+}
+
+/* Playful Theme (Creative Flow) */
+html[data-theme="playful"] {
+  --theme-primary-bg: #e9e5f1; /* cloud-lilac */
+  --theme-primary-text: #6a4e42; /* cocoa-dust */
+  --theme-accent-1: #dca38d; /* joy-coral */
+  --theme-accent-2: #c1dcdc; /* minted-sky */
+  --theme-card-bg: #faf9f6; /* ivory */
+  --theme-border: #e9e5f180; /* cloud-lilac/50 */
+  --theme-link: #dca38d; /* joy-coral */
+  --theme-link-hover: #6a4e42; /* cocoa-dust */
+  --theme-button-bg: #dca38d; /* joy-coral */
+  --theme-button-text: #6a4e42; /* cocoa-dust */
+  --theme-button-hover-bg: #c1dcdc; /* minted-sky */
+  --theme-input-bg: #f4d4a54d; /* citrus-cream/30 */
+  --theme-input-border: #e9e5f1b3; /* cloud-lilac/70 */
+  --theme-input-focus: #dca38d; /* joy-coral */
+  --theme-progress-bg: #dca38d4d; /* joy-coral/30 */
+  --theme-progress-fill: #c1dcdc; /* minted-sky */
+  --theme-hero-bg: #dca38d; /* joy-coral */
+  --theme-hero-text: #6a4e42; /* cocoa-dust */
+  --theme-hero-opacity: 0.2;
+  --theme-quote-bg: #c1dcdc; /* minted-sky */
+  --theme-quote-text: #6a4e42; /* cocoa-dust */
+  --theme-quote-opacity: 0.9;
+  --theme-footer-bg: #6a4e42; /* cocoa-dust */
+  --theme-footer-text: #e9e5f1; /* cloud-lilac */
+  --theme-footer-link: #dca38d; /* joy-coral */
+  --theme-footer-border: #6a4e42b3; /* cocoa-dust/70 */
+  --theme-header-bg: #e9e5f1; /* cloud-lilac */
+  --theme-header-text: #6a4e42; /* cocoa-dust */
+  --theme-header-border: #e9e5f180; /* cloud-lilac/50 */
+  --theme-header-hover: #dca38d4d; /* joy-coral/30 */
+  --theme-mobile-nav-bg: #e9e5f1; /* cloud-lilac */
+  --theme-mobile-nav-text: #6a4e42; /* cocoa-dust */
+  --theme-mobile-nav-button-bg: #dca38d; /* joy-coral */
+  --theme-mobile-nav-button-text: #6a4e42; /* cocoa-dust */
+  --theme-mobile-nav-button-hover: #c1dcdc4d; /* minted-sky/30 */
+  --theme-checkbox-border: #dca38d; /* joy-coral */
+  --theme-checkbox-checked-bg: #dca38d; /* joy-coral */
+  --theme-checkbox-checked-text: #faf9f6; /* ivory */
+  --theme-icon-color: #dca38d; /* joy-coral */
+  --theme-icon-hover: #c1dcdc; /* minted-sky */
+  --theme-tooltip-bg: #6a4e42; /* cocoa-dust */
+  --theme-tooltip-text: #e9e5f1; /* cloud-lilac */
+  --theme-chart-1: #c1dcdc; /* minted-sky */
+  --theme-chart-2: #dca38d; /* joy-coral */
+}
+
+@layer base {
+  body {
+    @apply bg-theme-primary-bg text-theme-primary-text;
+  }
+}
+
+@layer components {
+  .card-grid-item-classic {
+    @apply bg-theme-card-bg rounded-2xl shadow-xl border border-theme-border hover:shadow-2xl transition-shadow duration-300 ease-in-out;
+  }
+
+  .card-grid-item-playful {
+    @apply bg-theme-card-bg rounded-3xl shadow-lg border border-theme-border hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2;
+  }
+
+  .card-title-classic {
+    @apply text-2xl font-poppins text-theme-accent-1 mb-3;
+  }
+
+  .card-title-playful {
+    @apply text-2xl font-cabinet-grotesk text-theme-accent-1 mb-3;
+  }
+
+  .card-description-classic {
+    @apply text-theme-primary-text text-base leading-relaxed font-inter;
+  }
+
+  .card-description-playful {
+    @apply text-theme-primary-text text-base leading-relaxed font-work-sans;
+  }
+
+  .link-classic {
+    @apply text-theme-link underline hover:text-theme-link-hover transition-colors duration-200;
+  }
+
+  .link-playful {
+    @apply text-theme-link underline hover:text-theme-link-hover transition-colors duration-200 font-outfit font-medium;
+  }
+
+  .button-primary-classic {
+    @apply bg-theme-button-bg hover:bg-theme-button-hover-bg text-theme-button-text px-12 py-8 text-xl rounded-full shadow-lg transition-all duration-300 ease-in-out border border-theme-button-bg hover:border-theme-button-hover-bg;
+  }
+
+  .button-primary-playful {
+    @apply bg-theme-button-bg hover:bg-theme-button-hover-bg text-theme-button-text px-12 py-8 text-xl rounded-full shadow-lg transition-all duration-300 ease-in-out border border-theme-button-bg hover:border-theme-button-hover-bg transform hover:scale-105;
+  }
+
+  .button-outline-classic {
+    @apply border-theme-accent-1 text-theme-accent-1 hover:bg-theme-card-bg/30 px-12 py-5 text-lg rounded-full shadow-md bg-transparent transition-all duration-300 ease-in-out;
+  }
+
+  .button-outline-playful {
+    @apply border-theme-accent-1 text-theme-accent-1 hover:bg-theme-card-bg/50 px-12 py-5 text-lg rounded-full shadow-md bg-transparent transition-all duration-300 ease-in-out transform hover:scale-105;
+  }
+
+  .input-classic {
+    @apply rounded-lg bg-theme-input-bg border-theme-input-border focus:border-theme-input-focus focus:ring-theme-input-focus;
+  }
+
+  .input-playful {
+    @apply rounded-xl bg-theme-input-bg border-theme-input-border focus:border-theme-input-focus focus:ring-theme-input-focus shadow-sm;
+  }
+
+  .label-classic {
+    @apply text-base font-inter font-medium text-theme-primary-text;
+  }
+
+  .label-playful {
+    @apply text-base font-outfit font-medium text-theme-primary-text;
+  }
+
+  .hero-section-classic {
+    @apply relative bg-theme-hero-bg text-theme-hero-text rounded-3xl p-12 md:p-20 lg:p-24 overflow-hidden shadow-2xl text-center;
+  }
+
+  .hero-section-playful {
+    @apply relative bg-theme-hero-bg text-theme-hero-text rounded-[40px]  p-12 md:p-20 lg:p-24 overflow-hidden shadow-2xl text-center;
+  }
+
+  .hero-title-classic {
+    @apply text-5xl md:text-7xl lg:text-8xl font-playfair-display font-bold leading-tight mb-8;
+  }
+
+  .hero-title-playful {
+    @apply text-5xl md:text-7xl lg:text-8xl font-cabinet-grotesk font-bold leading-tight mb-8;
+  }
+
+  .hero-subtitle-classic {
+    @apply text-xl md:text-2xl lg:text-3xl mb-12 opacity-90 font-inter font-light;
+  }
+
+  .hero-subtitle-playful {
+    @apply text-xl md:text-2xl lg:text-3xl mb-12 opacity-90 font-work-sans font-light;
+  }
+
+  .section-title-classic {
+    @apply text-4xl md:text-6xl font-playfair-display font-semibold text-theme-accent-1 text-center;
+  }
+
+  .section-title-playful {
+    @apply text-4xl md:text-6xl font-cabinet-grotesk font-semibold text-theme-accent-1 text-center;
+  }
+
+  .quote-section-classic {
+    @apply bg-theme-quote-bg text-theme-quote-text rounded-3xl p-12 md:p-20 text-center shadow-2xl;
+  }
+
+  .quote-section-playful {
+    @apply bg-theme-quote-bg text-theme-quote-text rounded-[40px] p-12 md:p-20 text-center shadow-2xl transform rotate-1;
+  }
+
+  .quote-text-classic {
+    @apply text-4xl md:text-6xl font-playfair-display font-bold mb-10 leading-tight;
+  }
+
+  .quote-text-playful {
+    @apply text-4xl md:text-6xl font-fraunces font-bold mb-10 leading-tight;
+  }
+
+  .footer-classic {
+    @apply bg-theme-footer-bg text-theme-footer-text py-12 px-4 md:px-8 lg:px-12;
+  }
+
+  .footer-playful {
+    @apply bg-theme-footer-bg text-theme-footer-text py-12 px-4 md:px-8 lg:px-12 rounded-t-[40px] shadow-inner;
+  }
+
+  .footer-link-classic {
+    @apply text-theme-footer-text/80 hover:text-theme-footer-link transition-colors duration-200;
+  }
+
+  .footer-link-playful {
+    @apply text-theme-footer-text/90 hover:text-theme-footer-link transition-colors duration-200 font-outfit;
+  }
+
+  .header-classic {
+    @apply sticky top-0 z-40 w-full bg-theme-header-bg shadow-sm border-b border-theme-header-border;
+  }
+
+  .header-playful {
+    @apply sticky top-0 z-40 w-full bg-theme-header-bg shadow-md border-b border-theme-header-border rounded-b-2xl;
+  }
+
+  .header-link-classic {
+    @apply group inline-flex h-10 w-max items-center justify-center rounded-md bg-theme-header-bg px-5 py-2 text-base font-inter font-medium text-theme-header-text transition-colors hover:bg-theme-header-hover focus:bg-theme-header-hover focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-theme-header-hover data-[state=open]:bg-theme-header-hover;
+  }
+
+  .header-link-playful {
+    @apply group inline-flex h-10 w-max items-center justify-center rounded-full bg-theme-header-bg px-5 py-2 text-base font-outfit font-medium text-theme-header-text transition-colors hover:bg-theme-header-hover focus:bg-theme-header-hover focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-theme-header-hover data-[state=open]:bg-theme-header-hover;
+  }
+
+  .mobile-nav-button-classic {
+    @apply fixed bottom-4 right-4 md:hidden bg-theme-mobile-nav-button-bg text-theme-mobile-nav-button-text rounded-full p-3 shadow-lg z-50;
+  }
+
+  .mobile-nav-button-playful {
+    @apply fixed bottom-4 right-4 md:hidden bg-theme-mobile-nav-button-bg text-theme-mobile-nav-button-text rounded-full p-4 shadow-xl z-50 transform hover:scale-110 transition-transform;
+  }
+
+  .mobile-nav-sheet-classic {
+    @apply bg-theme-mobile-nav-bg p-6;
+  }
+
+  .mobile-nav-sheet-playful {
+    @apply bg-theme-mobile-nav-bg p-8 rounded-l-3xl;
+  }
+
+  .mobile-nav-link-classic {
+    @apply hover:text-theme-link-hover transition-colors duration-200;
+  }
+
+  .mobile-nav-link-playful {
+    @apply hover:text-theme-link-hover transition-colors duration-200 font-outfit text-xl;
+  }
+
+  .checkbox-classic {
+    @apply w-7 h-7 border-theme-checkbox-border data-[state=checked]:bg-theme-checkbox-checked-bg data-[state=checked]:text-theme-checkbox-checked-text rounded-md;
+  }
+
+  .checkbox-playful {
+    @apply w-8 h-8 border-theme-checkbox-border data-[state=checked]:bg-theme-checkbox-checked-bg data-[state=checked]:text-theme-checkbox-checked-text rounded-full;
+  }
+
+  .icon-classic {
+    @apply h-8 w-8 text-theme-icon-color group-hover:text-theme-icon-hover transition-colors duration-200;
+  }
+
+  .icon-playful {
+    @apply h-9 w-9 text-theme-icon-color group-hover:text-theme-icon-hover transition-colors duration-200 transform group-hover:rotate-6;
+  }
+
+  .tooltip-content-classic {
+    @apply bg-theme-tooltip-bg text-theme-tooltip-text p-3 rounded-md shadow-lg max-w-xs font-inter;
+  }
+
+  .tooltip-content-playful {
+    @apply bg-theme-tooltip-bg text-theme-tooltip-text p-4 rounded-lg shadow-xl max-w-sm font-outfit;
+  }
+}
